@@ -157,7 +157,6 @@ resource "aws_instance" "hashicat" {
 # Run the deploy_app.sh script.
 resource "null_resource" "configure_cat_app" {
   depends_on = [aws_eip_association.hashicat]
-
   // triggers = {
   //   build_number = timestamp()
   // }
